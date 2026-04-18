@@ -1,0 +1,23 @@
+/* Dashboard & Map */
+.map-area { flex: 1; position: relative; min-height: 400px; padding: 20px;}
+.map-wrapper { width: 100%; height: 100%; position: relative; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); z-index: 1; background: var(--bg-primary); }
+
+/* Leaflet Overrides */
+.stop-marker-icon { background: none; border: none; }
+.bus-icon-wrapper {
+  width: 54px; height: 32px; background-color: #1a1a20; border: 2.5px solid; border-radius: 8px;
+  display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 15px rgba(0,0,0,0.6);
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1); cursor: pointer;
+  z-index: 100;
+}
+.bus-number-label {
+  color: white; font-size: 0.75rem; font-weight: 800; font-family: var(--font-display);
+  letter-spacing: -0.03em; pointer-events: none;
+  white-space: nowrap;
+  text-align: center;
+  width: 100%;
+}
+.bus-icon-wrapper:hover, .active-bus { transform: scale(1.1); z-index: 1000 !important; border-width: 3.5px; box-shadow: 0 0 25px rgba(0,0,0,0.8); }
+
+.leaflet-popup-content-wrapper { background: var(--bg-secondary) !important; color: var(--text-primary) !important; border-radius: 8px !important; border: 1px solid var(--border-color); }
+.leaflet-popup-tip { background: var(--bg-secondary) !important; border-bottom: 1px solid var(--border-color); border-right: 1px solid var(--border-color); }
